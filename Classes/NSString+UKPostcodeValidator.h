@@ -3,7 +3,7 @@
 //
 //
 //  Created by Calvin Cestari on 2/18/2014.
-//  Copyright (c) 2014 Deliverance Ltd. All rights reserved.
+//  Copyright (c) 2014. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>
