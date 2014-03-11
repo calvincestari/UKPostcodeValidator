@@ -1,6 +1,6 @@
 //
 //  NSString+UKPostcodeValidator.h
-//  Deliverance
+//
 //
 //  Created by Calvin Cestari on 2/18/2014.
 //  Copyright (c) 2014 Deliverance Ltd. All rights reserved.
