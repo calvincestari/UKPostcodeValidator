@@ -1,0 +1,7 @@
+pod "UKPostcodeValidator", :path => "../UKPostcodeValidator.podspec"
+
+target "Demo" do
+end
+
+target "DemoTests" do
+end
