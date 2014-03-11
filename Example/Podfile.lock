@@ -1,0 +1,14 @@
+PODS:
+  - UKPostcodeValidator (0.1.0)
+
+DEPENDENCIES:
+  - UKPostcodeValidator (from `../UKPostcodeValidator.podspec`)
+
+EXTERNAL SOURCES:
+  UKPostcodeValidator:
+    :path: ../UKPostcodeValidator.podspec
+
+SPEC CHECKSUMS:
+  UKPostcodeValidator: 62a55dfefd1aedc0b51574f5f29f579a50d2ad5a
+
+COCOAPODS: 0.29.0

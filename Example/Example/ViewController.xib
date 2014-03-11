@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="4514" systemVersion="13C64" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
+    <dependencies>
+        <deployment defaultVersion="1536" identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3747"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ViewController">
+            <connections>
+                <outlet property="inputTextField" destination="A1h-9T-Hgi" id="Ds1-in-VSI"/>
+                <outlet property="view" destination="1" id="fzl-7Z-FPu"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="1">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="280" translatesAutoresizingMaskIntoConstraints="NO" id="PEo-pb-Hty">
+                    <rect key="frame" x="20" y="50" width="280" height="80"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <attributedString key="attributedText">
+                        <fragment>
+                            <string key="content">Type text below to check whether it is a valid UK postcode.
+</string>
+                            <attributes>
+                                <color key="NSColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <font key="NSFont" size="17" name="HelveticaNeue"/>
+                                <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                            </attributes>
+                        </fragment>
+                        <fragment>
+                            <string key="content">
+Red means invalid.</string>
+                            <attributes>
+                                <color key="NSColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <font key="NSFont" size="17" name="HelveticaNeue"/>
+                                <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                            </attributes>
+                        </fragment>
+                    </attributedString>
+                    <nil key="highlightedColor"/>
+                </label>
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter a postcode" textAlignment="center" adjustsFontSizeToFit="NO" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="A1h-9T-Hgi">
+                    <rect key="frame" x="20" y="155" width="280" height="45"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="45" id="emQ-i1-UCC"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                    <textInputTraits key="textInputTraits" autocapitalizationType="allCharacters" autocorrectionType="no" keyboardAppearance="light" returnKeyType="done"/>
+                    <connections>
+                        <outlet property="delegate" destination="-1" id="cvb-1v-nji"/>
+                    </connections>
+                </textField>
+                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="280" translatesAutoresizingMaskIntoConstraints="NO" id="HOh-ln-WTV">
+                    <rect key="frame" x="20" y="225" width="280" height="142"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <string key="text">Valid UK postcode formats:
+AA9A 9AA
+A9A 9AA
+A9 9AA
+A99 9AA
+AA9 9AA
+AA99 9AA</string>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="PEo-pb-Hty" secondAttribute="trailing" constant="20" id="2pM-jr-yl6"/>
+                <constraint firstAttribute="trailing" secondItem="HOh-ln-WTV" secondAttribute="trailing" constant="20" id="7z0-q9-pfg"/>
+                <constraint firstItem="PEo-pb-Hty" firstAttribute="leading" secondItem="1" secondAttribute="leading" constant="20" id="8bF-WO-zST"/>
+                <constraint firstItem="A1h-9T-Hgi" firstAttribute="leading" secondItem="1" secondAttribute="leading" constant="20" id="8iS-J2-ByD"/>
+                <constraint firstItem="HOh-ln-WTV" firstAttribute="top" secondItem="A1h-9T-Hgi" secondAttribute="bottom" constant="25" id="BpA-Pt-gXa"/>
+                <constraint firstItem="PEo-pb-Hty" firstAttribute="top" secondItem="1" secondAttribute="top" constant="50" id="CJP-XQ-BVU"/>
+                <constraint firstAttribute="trailing" secondItem="A1h-9T-Hgi" secondAttribute="trailing" constant="20" id="ZvI-p9-XqC"/>
+                <constraint firstItem="HOh-ln-WTV" firstAttribute="leading" secondItem="1" secondAttribute="leading" constant="20" id="hRS-Sb-S4g"/>
+                <constraint firstItem="A1h-9T-Hgi" firstAttribute="top" secondItem="PEo-pb-Hty" secondAttribute="bottom" constant="25" id="ltF-l9-jt2"/>
+                <constraint firstAttribute="centerX" secondItem="A1h-9T-Hgi" secondAttribute="centerX" id="qkw-SX-IEy"/>
+                <constraint firstAttribute="centerX" secondItem="HOh-ln-WTV" secondAttribute="centerX" id="ySE-yY-a86"/>
+            </constraints>
+            <simulatedStatusBarMetrics key="simulatedStatusBarMetrics"/>
+            <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+        </view>
+    </objects>
+</document>
