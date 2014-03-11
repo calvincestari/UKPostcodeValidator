@@ -11,6 +11,7 @@
 extern NSUInteger const MAX_UK_POSTCODE_CHARACTERS;
 
 typedef NS_OPTIONS(NSInteger, UKPostcodeValidatorOptions) {
+    UKPostcodeValidatorRelaxed = 0, // this allows no spaces or more than 1 space where required or trailing
     UKPostcodeValidatorRequireSpace = 1 << 0,
 };
 
