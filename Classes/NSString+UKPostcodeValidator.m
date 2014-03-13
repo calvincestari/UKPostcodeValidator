@@ -30,12 +30,12 @@ NSUInteger const MAX_UK_POSTCODE_CHARACTERS = 8;
         spaceMatchingRule = @"+?";
     }
 
-    NSDictionary *validFormats = @{@"AA9A 9AA": [NSString stringWithFormat:@"([a-z])([a-z])(\\d)([a-z])(\\s%@)(\\d)([a-z])([a-z])(\\s*?)$", spaceMatchingRule],
-                                   @"A9A 9AA": [NSString stringWithFormat:@"([a-z])(\\d)([a-z])(\\s%@)(\\d)([a-z])([a-z])(\\s*?)$", spaceMatchingRule],
-                                   @"A9 9AA": [NSString stringWithFormat:@"([a-z])(\\d)(\\s%@)(\\d)([a-z])([a-z])(\\s*?)$", spaceMatchingRule],
-                                   @"A99 9AA": [NSString stringWithFormat:@"([a-z])(\\d)(\\d)(\\s%@)(\\d)([a-z])([a-z])(\\s*?)$", spaceMatchingRule],
-                                   @"AA9 9AA": [NSString stringWithFormat:@"([a-z])([a-z])(\\d)(\\s%@)(\\d)([a-z])([a-z])(\\s*?)$", spaceMatchingRule],
-                                   @"AA99 9AA": [NSString stringWithFormat:@"([a-z])([a-z])(\\d)(\\d)(\\s%@)(\\d)([a-z])([a-z])(\\s*?)$", spaceMatchingRule]};
+    NSDictionary *validFormats = @{@"AA9A 9AA": [NSString stringWithFormat:@"^([a-z]{2})(\\d)([a-z])(\\s%@)(\\d)([a-z]{2})(\\s*?)$", spaceMatchingRule],
+                                   @"A9A 9AA": [NSString stringWithFormat:@"^([a-z])(\\d)([a-z])(\\s%@)(\\d)([a-z]{2})(\\s*?)$", spaceMatchingRule],
+                                   @"A9 9AA": [NSString stringWithFormat:@"^([a-z])(\\d)(\\s%@)(\\d)([a-z]{2})(\\s*?)$", spaceMatchingRule],
+                                   @"A99 9AA": [NSString stringWithFormat:@"^([a-z])(\\d{2})(\\s%@)(\\d)([a-z]{2})(\\s*?)$", spaceMatchingRule],
+                                   @"AA9 9AA": [NSString stringWithFormat:@"^([a-z]{2})(\\d)(\\s%@)(\\d)([a-z]{2})(\\s*?)$", spaceMatchingRule],
+                                   @"AA99 9AA": [NSString stringWithFormat:@"^([a-z]{2})(\\d{2})(\\s%@)(\\d)([a-z]{2})(\\s*?)$", spaceMatchingRule]};
 
     __block BOOL isValid = NO;
     [validFormats enumerateKeysAndObjectsUsingBlock:^(id key, id obj, BOOL *stop) {
