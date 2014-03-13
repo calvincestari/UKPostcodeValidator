@@ -15,7 +15,7 @@
 
 @implementation ExampleTests
 
-- (void)testPostcodes {
+- (void)testSpacing {
     XCTAssertTrue([@"AA9A 9AA" isValidUKPostcode:UKPostcodeValidatorRequireSpace], @"Failed AA9A 9AA (UKPostcodeValidatorRequireSpace)");
     XCTAssertTrue([@"A9A 9AA" isValidUKPostcode:UKPostcodeValidatorRequireSpace], @"Failed A9A 9AA (UKPostcodeValidatorRequireSpace)");
     XCTAssertTrue([@"A9 9AA" isValidUKPostcode:UKPostcodeValidatorRequireSpace], @"Failed A9 9AA (UKPostcodeValidatorRequireSpace)");
@@ -65,7 +65,9 @@
 
     XCTAssertTrue([@"AA999AA " isValidUKPostcode:UKPostcodeValidatorRelaxed], @"Failed AA999AA (UKPostcodeValidatorRelaxed)");
     XCTAssertTrue([@"AA99 9AA" isValidUKPostcode:UKPostcodeValidatorRelaxed], @"Failed AA99 9AA (UKPostcodeValidatorRelaxed)");
+}
 
+- (void)testInvalidFormats {
     XCTAssertFalse([@"12345678" isValidUKPostcode:UKPostcodeValidatorRequireSpace], @"Passed 12345678 (UKPostcodeValidatorRequireSpace)");
     XCTAssertFalse([@"12345678" isValidUKPostcode:UKPostcodeValidatorRelaxed], @"Passed 12345678 (UKPostcodeValidatorRelaxed)");
     XCTAssertFalse([@"123 5678" isValidUKPostcode:UKPostcodeValidatorRequireSpace], @"Passed 123 5678 (UKPostcodeValidatorRequireSpace)");
@@ -80,6 +82,10 @@
     XCTAssertFalse([@"9AA9AA" isValidUKPostcode:UKPostcodeValidatorRelaxed], @"Passed 9AA9AA (UKPostcodeValidatorRelaxed)");
     XCTAssertFalse([@"A99 9AAA" isValidUKPostcode:UKPostcodeValidatorRequireSpace], @"Passed A99 9AAA (UKPostcodeValidatorRequireSpace)");
     XCTAssertFalse([@"A999AAA" isValidUKPostcode:UKPostcodeValidatorRelaxed], @"Passed A999AAA (UKPostcodeValidatorRelaxed)");
+
+    // Test case for 0.1.1
+    XCTAssertFalse([@"3c2a3lp" isValidUKPostcode:UKPostcodeValidatorRelaxed], @"Passed 3c2a3lp (UKPostcodeValidatorRelaxed)");
+    XCTAssertFalse([@"3c2a 3lp" isValidUKPostcode:UKPostcodeValidatorRequireSpace], @"Passed 3c2a3lp (UKPostcodeValidatorRelaxed)");
 }
 
 @end
