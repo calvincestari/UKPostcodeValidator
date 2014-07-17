@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name = "UKPostcodeValidator"
-  s.version = "0.1.0"
+  s.version = "0.2.0"
   s.summary = "A simple category to provide UK postcode validation to NSString contents."
   s.homepage = "https://github.com/calvincestari/UKPostcodeValidator"
   s.license = 'MIT'
