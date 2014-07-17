@@ -31,7 +31,7 @@
 }
 
 - (void)textFieldDidChange:(id)sender {
-    BOOL isValid = [self.inputTextField.text isValidUKPostcode:UKPostcodeValidatorRelaxed];
+    BOOL isValid = [self.inputTextField.text isValidUKPostcodeFormat:UKPostcodeValidatorRelaxed];
 
     UIColor *validityColor = isValid ? [UIColor blackColor] : [UIColor redColor];
     self.inputTextField.textColor = validityColor;

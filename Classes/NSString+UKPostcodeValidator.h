@@ -21,6 +21,7 @@ typedef NS_OPTIONS(NSInteger, UKPostcodeValidatorOptions) {
 /** Call this method to check whether the contents match a valid UK postcode format.
  @returns YES if the contents are valid. NO if they don't match any known UK postcode format.
  */
-- (BOOL)isValidUKPostcode:(UKPostcodeValidatorOptions)options;
+- (BOOL)isValidUKPostcode:(UKPostcodeValidatorOptions)options __attribute__((deprecated("use -[isValidUKPostcodeFormat:] instead")));
+- (BOOL)isValidUKPostcodeFormat:(UKPostcodeValidatorOptions)options;
 
 @end

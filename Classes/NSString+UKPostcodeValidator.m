@@ -13,6 +13,10 @@ NSUInteger const MAX_UK_POSTCODE_CHARACTERS = 8;
 @implementation NSString (UKPostcodeValidator)
 
 - (BOOL)isValidUKPostcode:(UKPostcodeValidatorOptions)options {
+    return [self isValidUKPostcodeFormat:options];
+}
+
+- (BOOL)isValidUKPostcodeFormat:(UKPostcodeValidatorOptions)options {
     /** The following is a list of valid UK postcode formats; http://en.wikipedia.org/wiki/Postcodes_in_the_United_Kingdom#Formatting
 
      Format         Coverage                                    Example
