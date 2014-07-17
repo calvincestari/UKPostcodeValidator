@@ -24,4 +24,11 @@ typedef NS_OPTIONS(NSInteger, UKPostcodeValidatorOptions) {
 - (BOOL)isValidUKPostcode:(UKPostcodeValidatorOptions)options __attribute__((deprecated("use -[isValidUKPostcodeFormat:] instead")));
 - (BOOL)isValidUKPostcodeFormat:(UKPostcodeValidatorOptions)options;
 
+/** Use this method to compare postcode strings.
+ @return YES if the contents match.
+
+ @param aPostcode A string containing the postcode to compare against.
+ */
+- (BOOL)isEqualToPostcode:(NSString *)aPostcode;
+
 @end

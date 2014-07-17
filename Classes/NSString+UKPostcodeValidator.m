@@ -56,4 +56,11 @@ NSUInteger const MAX_UK_POSTCODE_CHARACTERS = 8;
     return isValid;
 }
 
+- (BOOL)isEqualToPostcode:(NSString *)aPostcode {
+    NSString *normalizedSelf = [self stringByReplacingOccurrencesOfString:@" " withString:@""];
+    NSString *normalizedPostcode = [aPostcode stringByReplacingOccurrencesOfString:@" " withString:@""];
+
+    return (NSOrderedSame == [normalizedSelf caseInsensitiveCompare:normalizedPostcode]);
+}
+
 @end

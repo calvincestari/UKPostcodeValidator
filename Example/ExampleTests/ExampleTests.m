@@ -88,4 +88,13 @@
     XCTAssertFalse([@"3c2a 3lp" isValidUKPostcodeFormat:UKPostcodeValidatorRequireSpace], @"Passed 3c2a3lp (UKPostcodeValidatorRelaxed)");
 }
 
+- (void)testComparison {
+    XCTAssertTrue([@"123456" isEqualToPostcode:@"123456"], @"Failed '123456' isEqualToPostcode: '123456'");
+    XCTAssertTrue([@"abcDEF" isEqualToPostcode:@"abcDEF"], @"Failed 'abcDEF' isEqualToPostcode: 'abcDEF'");
+    XCTAssertTrue([@"abc def" isEqualToPostcode:@"abcdef"], @"Failed 'abc def' isEqualToPostcode: 'abcdef'");
+    XCTAssertTrue([@"abcdef" isEqualToPostcode:@"abc  def"], @"Failed 'abcdef isEqualToPostcode: 'abc  def'");
+
+    XCTAssertFalse([@"123456" isEqualToPostcode:@"abcdef"], @"Passed '123456' isEqualToPostcode 'abcdef' comparison");
+}
+
 @end
